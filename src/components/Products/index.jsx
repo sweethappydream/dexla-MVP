@@ -1,16 +1,16 @@
-import React from "react";
-import ProductOutline from "./ProductOutline";
-import { sales, save, stock } from "../svg/body";
+import React, { useContext } from "react";
+import DesktopView from "./DesktopView";
+import MobileView from "./MobileView";
+import { responsiveContext } from "../../context";
 
 const Products = () => {
-    return (
-        <div className="flex items-start justify-center">
-            <ProductOutline src={save} name="Save Products" num="178+"/>
-            <ProductOutline src={stock} name="Stock Products" num="20+"/>
-            <ProductOutline src={sales} name="Sales Products" num="190+"/>
-            <ProductOutline src={save} name="Save Products" num="178+"/>
-        </div>
-    )
-}
+  const { screen } = useContext(responsiveContext);
+  return (
+    <>
+      {screen === "desktop" && <DesktopView />}
+      {screen === "mobile" && <MobileView />}
+    </>
+  );
+};
 
 export default Products;

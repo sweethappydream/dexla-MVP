@@ -1,20 +1,20 @@
 import React from "react";
-import { components, datasource, design, extensions, functions, pageStructure, pages, settings, variables, workflows } from "../svg/sidebar";
+import { components, componentsHover, datasource, datasourceHover, design, designHover, extensions, extensionsHover, functions, functionsHover, pageStructure, pageStructureHover, pages, pagesHover, settings, settingsHover, variables, variablesHover, workflows, workflowsHover } from "../svg/sidebar";
 import SigleTab from "./SingleTab";
 
 const Sidebar = () => {
     return (
         <div className="h-full w-20 bg-bar-bg flex flex-col items-center justify-start text-[11px]">
-            <SigleTab src={components} name={"Components"} />
-            <SigleTab src={pages} name={"Pages"} />
-            <SigleTab src={pageStructure} name={"Page Structure"} />
-            <SigleTab src={datasource} name={"Data Sources"} />
-            <SigleTab src={workflows} name={"Workflows"} />
-            <SigleTab src={functions} name={"Functions"} />
-            <SigleTab src={variables} name={"Variables"} />
-            <SigleTab src={design} name={"Design"} />
-            <SigleTab src={extensions} name={"Extensions"} />
-            <SigleTab src={settings} name={"Settings"} />
+            <SigleTab src={components} srcHover={componentsHover} name={"Components"} />
+            <SigleTab src={pages} srcHover={pagesHover} name={"Pages"} />
+            <SigleTab src={pageStructure} srcHover={pageStructureHover} name={"Page Structure"} />
+            <SigleTab src={datasource} srcHover={datasourceHover} name={"Data Sources"} />
+            <SigleTab src={workflows} srcHover={workflowsHover} name={"Workflows"} />
+            <SigleTab src={functions} srcHover={functionsHover} name={"Functions"} />
+            <SigleTab src={variables} srcHover={variablesHover} name={"Variables"} />
+            <SigleTab src={design} srcHover={designHover} name={"Design"} />
+            <SigleTab src={extensions} srcHover={extensionsHover} name={"Extensions"} />
+            <SigleTab src={settings} srcHover={settingsHover} name={"Settings"} />
         </div>
     )
 }
