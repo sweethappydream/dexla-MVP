@@ -6,6 +6,9 @@ const Sidebar = () => {
     return (
         <div className="h-full w-20 bg-bar-bg flex flex-col items-center justify-start text-[11px]">
             <SigleTab src={components} srcHover={componentsHover} name={"Components"} />
+            <div>
+                
+            </div>
             <SigleTab src={pages} srcHover={pagesHover} name={"Pages"} />
             <SigleTab src={pageStructure} srcHover={pageStructureHover} name={"Page Structure"} />
             <SigleTab src={datasource} srcHover={datasourceHover} name={"Data Sources"} />

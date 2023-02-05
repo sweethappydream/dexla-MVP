@@ -1,7 +1,9 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import Outline from "../components/Outline";
 import Products from "../components/Products";
 import { editContext, responsiveContext } from "../context";
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
 
 const Home = () => {
   const [isEditable, setIsEditable] = useState(true);
@@ -12,11 +14,13 @@ const Home = () => {
   return (
     <editContext.Provider value={editValue}>
       <responsiveContext.Provider value={screenValue}>
-        <Outline>
-          <div className=" pt-24 pl-16">
-            <Products />
-          </div>
-        </Outline>
+        <DndProvider backend={HTML5Backend}>
+          <Outline>
+            <div className=" py-24 px-16">
+              <Products />
+            </div>
+          </Outline>
+        </DndProvider>
       </responsiveContext.Provider>
     </editContext.Provider>
   );

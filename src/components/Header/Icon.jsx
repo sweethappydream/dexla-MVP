@@ -4,10 +4,10 @@ import { responsiveContext } from "../../context";
 const Icon = (props) => {
   const { src, srcHover, alt } = props;
   const { screen, setScreen } = useContext(responsiveContext);
-  console.log(screen);
+
   return (
     <div
-      className={`group hover:bg-hover w-14 h-9 flex items-center justify-center rounded-sm ${
+      className={`group hover:bg-hover w-14 h-9 flex items-center justify-center rounded-md ${
         screen === alt ? "bg-hover" : ""
       }`}
       onClick={() => setScreen(alt)}

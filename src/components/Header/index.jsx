@@ -38,7 +38,7 @@ const Header = () => {
           <Icon src={pad} srcHover={padHover} alt="pad"/>
           <Icon src={mobileHorizon} srcHover={mobileHorizonHover} alt="mobileHorizon"/>
           <Icon src={mobile} srcHover={mobileHover} alt="mobile"/>
-          <div className="flex items-center ml-5">1920 PX 100%</div>
+          <div className="flex items-center ml-5 text-xs">1920 PX 100%</div>
         </div>
         <div className="flex py-2 mr-5">
           <img className={`px-3 hover:bg-green rounded-sm cursor-pointer ${isEditable?"bg-green":""}` } src={edit} alt="edit" onClick={() => setIsEditable(true)} />
