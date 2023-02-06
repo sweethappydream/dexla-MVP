@@ -1,14 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 import Header from "../Header";
 import Sidebar from "../Sidebar";
-import { Outlet } from "react-router-dom";
+import SubBar from "../Sidebar/SubBar";
 
 const Outline = ({children}) => {
+    const [isOpen, setIsOpen] = useState(false);
     return (
         <>
             <Header/>
             <div className="flex">
-                <Sidebar/>
+                <Sidebar isOpen={isOpen} setIsOpen={setIsOpen}/>
+                <SubBar isOpen={isOpen} setIsOpen={setIsOpen}/>
                 {children}
             </div>
         </>

@@ -16,9 +16,7 @@ const Home = () => {
       <responsiveContext.Provider value={screenValue}>
         <DndProvider backend={HTML5Backend}>
           <Outline>
-            <div className=" py-24 px-16">
-              <Products />
-            </div>
+            <Products />
           </Outline>
         </DndProvider>
       </responsiveContext.Provider>

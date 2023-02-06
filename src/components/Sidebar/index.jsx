@@ -2,13 +2,11 @@ import React from "react";
 import { components, componentsHover, datasource, datasourceHover, design, designHover, extensions, extensionsHover, functions, functionsHover, pageStructure, pageStructureHover, pages, pagesHover, settings, settingsHover, variables, variablesHover, workflows, workflowsHover } from "../svg/sidebar";
 import SigleTab from "./SingleTab";
 
-const Sidebar = () => {
+const Sidebar = ({isOpen, setIsOpen}) => {
+
     return (
         <div className="h-full w-20 bg-bar-bg flex flex-col items-center justify-start text-[11px]">
-            <SigleTab src={components} srcHover={componentsHover} name={"Components"} />
-            <div>
-                
-            </div>
+            <SigleTab src={components} srcHover={componentsHover} name={"Components"} setIsOpen ={setIsOpen}/>
             <SigleTab src={pages} srcHover={pagesHover} name={"Pages"} />
             <SigleTab src={pageStructure} srcHover={pageStructureHover} name={"Page Structure"} />
             <SigleTab src={datasource} srcHover={datasourceHover} name={"Data Sources"} />
