@@ -21,9 +21,9 @@ export default function Components({ isOpen, setIsOpen }) {
     <Collapse
       orientation="horizontal"
       in={isOpen}
-      className="pl-[85px] fixed z-10"
+      className="pl-[80px] fixed z-10"
     >
-      <div className="w-[300px] bg-white h-[100vh] p-3">
+      <div className="w-[300px] bg-white min-h-[100vh] h-full p-3">
         <div className="flex justify-between">
           <p className=" text-2xl">Components</p>
           <div onClick={() => setIsOpen(false)}>

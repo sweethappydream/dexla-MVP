@@ -5,7 +5,7 @@ import SigleTab from "./SingleTab";
 const Sidebar = ({isOpen, setIsOpen}) => {
 
     return (
-        <div className="h-[100vh] w-20 bg-bar-bg flex flex-col items-center justify-start text-[11px]">
+        <div className="min-h-[100vh] h-full w-20 bg-bar-bg flex flex-col items-center justify-start text-[11px]">
             <SigleTab src={components} srcHover={componentsHover} name={"Components"} setIsOpen ={setIsOpen}/>
             <SigleTab src={pages} srcHover={pagesHover} name={"Pages"} />
             <SigleTab src={pageStructure} srcHover={pageStructureHover} name={"Page Structure"} />
