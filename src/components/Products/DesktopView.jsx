@@ -16,7 +16,7 @@ const DesktopView = ({basket, setBasket}) => {
   });
 
   return (
-    <div className=" py-24 px-16">
+    <div className=" py-24 px-60">
       <div className="w-full min-w-[200px] border min-h-[200px] border-slate-300 flex flex-wrap flex-start overflow-auto " ref={dropRef}>
         {basket.map((product, index) =><ProductOutline key={index} src={product.src} name={product.name} num={product.num} />)}
         {isOver && <div>Drop Here!</div>}
