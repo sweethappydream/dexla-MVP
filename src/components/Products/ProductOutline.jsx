@@ -27,7 +27,6 @@ const ProductOutline = (props) => {
         <p className=" text-2xl">{num}</p>
         <p className=" text-sm">{name}</p>
       </div>
-      {isDragging && "😁"}
     </div>
   );
 };

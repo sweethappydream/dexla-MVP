@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import ProductOutline from "./ProductOutline";
+import React, { useState, useRef, useCallback } from "react";
 import { useDrop } from "react-dnd";
+import SingleProduct from "./SingleProduct";
 
 const DesktopView = ({basket, setBasket}) => {
 
@@ -12,14 +12,30 @@ const DesktopView = ({basket, setBasket}) => {
       ),
     collect: (monitor) => ({
       isOver: monitor.isOver()
-    })
+    }),
+    
   });
+
+  const moveItem = useCallback(
+    (dragIndex, hoverIndex) => {
+      
+      const dragItem = basket[dragIndex];
+      const hoverItem = basket[hoverIndex];
+      // Swap places of dragItem and hoverItem in the pets array
+      setBasket((basket) => {
+        const updatedPets = [...basket];
+        updatedPets[dragIndex] = hoverItem;
+        updatedPets[hoverIndex] = dragItem;
+        return updatedPets;
+      });
+    },
+    [basket],
+  );
 
   return (
     <div className=" py-24 px-60">
-      <div className="w-full min-w-[200px] border min-h-[200px] border-slate-300 flex flex-wrap flex-start overflow-auto " ref={dropRef}>
-        {basket.map((product, index) =><ProductOutline key={index} src={product.src} name={product.name} num={product.num} />)}
-        {isOver && <div>Drop Here!</div>}
+      <div className={`w-full min-w-[600px] border min-h-[200px] flex flex-wrap flex-start overflow-auto ${isOver?"border-slate-700":"border-slate-200"}`} ref={dropRef}>
+        {basket.map((product, index) =><SingleProduct key={index} index={index} src={product.src} name={product.name} num={product.num} moveItem={moveItem}/>)}
       </div>
     </div>
   );
