@@ -1,7 +1,7 @@
 import React from "react";
 import { Collapse } from "@mui/material";
 import { cross, layout } from "../../svg/sidebar/components";
-import ProductOutline from "../../Products/ProductOutline";
+import MenuProduct from "./MenuProduct";
 import { save, sales, stock } from "../../svg/body";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -36,9 +36,11 @@ export default function Components({ isOpen, setIsOpen }) {
           </div>
         </div>
         <div className="flex flex-col items-start justify-start">
-          <ProductOutline src={save} name="Save Products" num="178+" />
-          <ProductOutline src={stock} name="Stock Products" num="20+" />
-          <ProductOutline src={sales} name="Sales Products" num="190+" />
+          <div className="flex py-4">
+            <MenuProduct src={save} name="Save Products" num="178+" />
+            <MenuProduct src={stock} name="Stock Products" num="20+" />
+            <MenuProduct src={sales} name="Sales Products" num="190+" />
+          </div>
           <Accordion
             expanded={expanded === "panel1"}
             onChange={handleChange("panel1")}
@@ -49,14 +51,12 @@ export default function Components({ isOpen, setIsOpen }) {
               aria-controls="panel1bh-content"
               id="panel1bh-header"
             >
-              <img src={inputs} alt="inputs"/>
-              <Typography  className="pl-3">
-                Inputs
-              </Typography>
+              <img src={inputs} alt="inputs" />
+              <Typography className="pl-3">Inputs</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                buttons, textfields, inputs, checkbox etc....  
+                buttons, textfields, inputs, checkbox etc....
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -70,10 +70,8 @@ export default function Components({ isOpen, setIsOpen }) {
               aria-controls="panel2bh-content"
               id="panel2bh-header"
             >
-              <img src={layout} alt="layout"/>
-              <Typography className="pl-3" >
-                Layout
-              </Typography>
+              <img src={layout} alt="layout" />
+              <Typography className="pl-3">Layout</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
