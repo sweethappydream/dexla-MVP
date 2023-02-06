@@ -8,8 +8,8 @@ export default function Components({ isOpen, setIsOpen }) {
   console.log(isOpen);
 
   return (
-    <Collapse orientation="horizontal" in={isOpen} className=" z-10">
-      <div className="w-[300px] bg-white h-full p-3">
+    <Collapse orientation="horizontal" in={isOpen} className="pl-[85px] fixed z-10" >
+      <div className="w-[300px] bg-white h-[100vh] p-3">
         <div className="flex justify-between">
           <p className=" text-2xl">Components</p>
           <div onClick={() => setIsOpen(false)}>
