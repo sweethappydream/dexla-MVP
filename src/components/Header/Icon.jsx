@@ -7,7 +7,7 @@ const Icon = (props) => {
 
   return (
     <div
-      className={`group hover:bg-hover w-14 h-9 flex items-center justify-center rounded-md ${
+      className={`group hover:bg-hover w-14 h-9 flex items-center justify-center rounded-md cursor-pointer ${
         screen === alt ? "bg-hover" : ""
       }`}
       onClick={() => setScreen(alt)}
