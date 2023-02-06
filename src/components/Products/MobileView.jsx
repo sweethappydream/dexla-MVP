@@ -12,9 +12,9 @@ const DesktopView = ({ basket, setBasket }) => {
   });
 
   return (
-    <div className="bg-slate-200 flex items-center justify-center w-full pt-5">
+    <div className="bg-slate-200 flex items-start justify-center w-full pt-5">
       <div
-        className="flex flex-col items-center justify-start border min-h-[200px] bg-white w-[648px] border-slate-300 "
+        className="flex flex-col items-center justify-start border h-[100vh] bg-white w-[648px] border-slate-300 "
         ref={dropRef}
       >
         {basket.map((product, index) => (
