@@ -40,9 +40,10 @@ const Header = () => {
           <Icon src={mobile} srcHover={mobileHover} alt="mobile"/>
           <div className="flex items-center ml-5 text-xs">1920 PX 100%</div>
         </div>
-        <div className="flex py-2 mr-5">
+        <div className="flex py-2 mr-5 justify-center items-center">
           <img className={`px-3 hover:bg-green rounded-sm cursor-pointer ${isEditable?"bg-green":""}` } src={edit} alt="edit" onClick={() => setIsEditable(true)} />
           <img className={`px-3 hover:bg-green rounded-sm cursor-pointer ${isEditable?"":"bg-green"}`} src={preview} alt="preview" onClick={() => setIsEditable(false)} />
+          <div className="bg-slate-200 h-[50px] w-[1px] ml-9"></div>
           <img className="ml-9 px-3 hover:bg-green rounded-sm" src={notification} alt="notify" />
           <div className="px-3">
             <Button className="h-8" color="primary" variant="contained">
