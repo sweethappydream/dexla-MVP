@@ -1,10 +1,10 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 // import Draggable from "react-draggable";
 import { editContext } from "../../context";
 import { useDrag, useDrop } from "react-dnd";
 
 const SingleProduct = (props) => {
-  const { src, num, name, index, moveItem } = props;
+  const { src, num, name, index, moveItem, setIsDragging, setHoverIndex } = props;
   const { isEditable } = useContext(editContext);
   const [{ isDragging }, dragRef] = useDrag(
     {
@@ -17,12 +17,13 @@ const SingleProduct = (props) => {
     },
     [isEditable]
   );
+
   const [spec, dropRef] = useDrop({
     accept: "singleProduct",
     hover: (singleProduct, monitor) => {
       const dragIndex = singleProduct.index;
-      console.log(singleProduct)
       const hoverIndex = index;
+      setHoverIndex(hoverIndex)
       const hoverBoundingRect = ref.current?.getBoundingClientRect();
       const hoverMiddleY =
         (hoverBoundingRect.bottom - hoverBoundingRect.top) / 2;
@@ -40,6 +41,10 @@ const SingleProduct = (props) => {
 
   const ref = useRef(null);
   const dragDropRef = dragRef(dropRef(ref))
+
+  useEffect(() => {
+    setIsDragging(isDragging);
+  },[isDragging])
 
   return (
     <div
