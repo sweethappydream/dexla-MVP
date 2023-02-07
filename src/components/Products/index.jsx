@@ -1,11 +1,11 @@
 import React, { useState, useContext } from "react";
 import DesktopView from "./DesktopView";
 import MobileView from "./MobileView";
-import { responsiveContext } from "../../context";
+import { responsiveContext, basketContext } from "../../context";
 
 const Products = () => {
-  const [basket, setBasket] = useState([]);
   const { screen } = useContext(responsiveContext);
+  const { basket, setBasket} = useContext(basketContext);
   return (
     <>
       {screen === "desktop" && <DesktopView basket={basket} setBasket={setBasket}/>}

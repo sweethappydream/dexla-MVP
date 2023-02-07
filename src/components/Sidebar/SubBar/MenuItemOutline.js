@@ -1,14 +1,13 @@
 import React, { useContext } from "react";
-// import Draggable from "react-draggable";
 import { editContext } from "../../../context";
 import { useDrag } from "react-dnd";
 
-const MenuProduct = (props) => {
-  const { src, num, name } = props;
+const MenuItemOutline = ({item, children}) => {
   const { isEditable } = useContext(editContext);
-  const [{ isDragging }, dragRef] = useDrag({
+  const [{ isDragging }, dragRef] = useDrag(
+    {
       type: "product",
-      item: { src, num, name },
+      item: {...item},
       collect: (monitor) => ({
         isDragging: monitor.isDragging(),
       }),
@@ -17,9 +16,9 @@ const MenuProduct = (props) => {
     [isEditable]
   );
 
-  return (
-      <img src={src} alt="save prodcuts" ref={dragRef}/>
-  );
+  return <div ref={dragRef}>
+    {children}
+  </div>;
 };
 
-export default MenuProduct;
+export default MenuItemOutline;

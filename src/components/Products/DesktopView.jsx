@@ -8,7 +8,8 @@ const DesktopView = ({ basket, setBasket }) => {
 
   const [{ isOver }, dropRef] = useDrop({
     accept: "product",
-    drop: (item) => setBasket((basket) => [...basket, item]),
+    drop: (item) => {
+      setBasket((basket) => [...basket, item])},
     collect: (monitor) => ({
       isOver: monitor.isOver(),
     }),
@@ -29,7 +30,6 @@ const DesktopView = ({ basket, setBasket }) => {
     [basket]
   );
 
-  console.log(isDragging)
 
   return (
     <div className=" py-24 px-60">
