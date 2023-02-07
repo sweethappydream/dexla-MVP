@@ -18,7 +18,6 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Icon from "./Icon";
 import { editContext, basketContext } from "../../context";
 import sendData from "../../api";
-import download from "downloadjs";
 import fileDownload from 'js-file-download'
 
 

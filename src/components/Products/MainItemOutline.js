@@ -1,5 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
-// import Draggable from "react-draggable";
+import React, { useContext, useEffect, useRef } from "react";
 import { editContext } from "../../context";
 import { useDrag, useDrop } from "react-dnd";
 

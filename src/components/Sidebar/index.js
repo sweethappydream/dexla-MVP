@@ -2,7 +2,7 @@ import React from "react";
 import { components, componentsHover, datasource, datasourceHover, design, designHover, extensions, extensionsHover, functions, functionsHover, pageStructure, pageStructureHover, pages, pagesHover, settings, settingsHover, variables, variablesHover, workflows, workflowsHover } from "../svg/sidebar";
 import SigleTab from "./SingleTab";
 
-const Sidebar = ({isOpen, setIsOpen}) => {
+const Sidebar = ({setIsOpen}) => {
 
     return (
         <div className="min-h-[100vh] h-full w-20 bg-bar-bg flex flex-col items-center justify-start text-[11px]">

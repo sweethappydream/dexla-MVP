@@ -2,7 +2,7 @@ import React from "react";
 import SingleProduct from "./SingleProduct";
 
 //code
- const basket = [{"src":"img/save.svg","name":"Save Products","num":"178+"},{"src":"img/stock.svg","name":"Stock Products","num":"20+"},{"src":"img/sales.svg","name":"Sales Products","num":"190+"},{"src":"img/stock.svg","name":"Stock Products","num":"20+"},{"src":"img/save.svg","name":"Save Products","num":"178+"},{"src":"img/sales.svg","name":"Sales Products","num":"190+"},{"src":"img/stock.svg","name":"Stock Products","num":"20+"}]
+ const basket = [{"src":"img/sales.svg","name":"Sales Products","num":"190+"},{"src":"img/save.svg","name":"Save Products","num":"178+"},{"src":"img/stock.svg","name":"Stock Products","num":"20+"},{"src":"img/stock.svg","name":"Stock Products","num":"20+"},{"src":"img/stock.svg","name":"Stock Products","num":"20+"},{"src":"img/save.svg","name":"Save Products","num":"178+"},{"src":"img/stock.svg","name":"Stock Products","num":"20+"},{"src":"img/sales.svg","name":"Sales Products","num":"190+"},{"src":"img/save.svg","name":"Save Products","num":"178+"},{"src":"img/sales.svg","name":"Sales Products","num":"190+"},{"src":"img/stock.svg","name":"Stock Products","num":"20+"},{"src":"img/sales.svg","name":"Sales Products","num":"190+"},{"src":"img/save.svg","name":"Save Products","num":"178+"}]
 //code
 
 const Home = () => {

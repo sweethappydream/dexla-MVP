@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import DesktopView from "./DesktopView";
 import MobileView from "./MobileView";
 import { responsiveContext, basketContext } from "../../context";

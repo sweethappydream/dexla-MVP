@@ -1,7 +1,6 @@
 import React, { useCallback, useState } from "react";
 import SingleProduct from "./SingleProduct";
 import { useDrop } from "react-dnd";
-import { hover } from "@testing-library/user-event/dist/hover";
 
 const DesktopView = ({ basket, setBasket }) => {
   const [isDragging, setIsDragging] = useState(false);

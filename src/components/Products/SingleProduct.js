@@ -1,7 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
-// import Draggable from "react-draggable";
-import { editContext } from "../../context";
-import { useDrag, useDrop } from "react-dnd";
+import React  from "react";
 import MainItemOutline from "./MainItemOutline";
 
 const SingleProduct = (props) => {

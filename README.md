@@ -1,8 +1,20 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Acticate the Backend
 
-## Available Scripts
+1. Get inside the server folder.
+
+# cd server
+
+2. Install dependencies
+# npm install
+
+3. Run the server
+
+# npm start
+
+
+
+# Run the frontend server
 
 In the project directory, you can run:
 
