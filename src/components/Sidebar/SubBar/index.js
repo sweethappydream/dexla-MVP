@@ -42,7 +42,7 @@ export default function Components({ isOpen, setIsOpen }) {
             <MenuItemOutline item={{src:"img/stock.svg", name:"Stock Products", num:"20+"}} ><img src="img/stock.svg" alt="save prodcuts"/></MenuItemOutline>
             <MenuItemOutline item={{src:"img/sales.svg", name:"Sales Products", num:"190+"}} ><img src="img/sales.svg" alt="sales prodcuts"/></MenuItemOutline>
           </div>
-          {/* <MenuItemOutline item={{}} ><div className="flex items-center justify-center"><span className=" text-lg text-center">TextField</span></div></MenuItemOutline> */}
+          <MenuItemOutline item={{}} ><div className="flex items-center justify-center"><span className=" text-lg text-center">TextField</span></div></MenuItemOutline>
           <Accordion
             expanded={expanded === "panel1"}
             onChange={handleChange("panel1")}

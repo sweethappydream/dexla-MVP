@@ -9,7 +9,8 @@ const DesktopView = ({ basket, setBasket }) => {
   const [{ isOver }, dropRef] = useDrop({
     accept: "product",
     drop: (item) => {
-      setBasket((basket) => [...basket, item])},
+      setBasket((basket) => [...basket, item]);
+    },
     collect: (monitor) => ({
       isOver: monitor.isOver(),
     }),
@@ -30,7 +31,6 @@ const DesktopView = ({ basket, setBasket }) => {
     [basket]
   );
 
-
   return (
     <div className=" py-24 px-60">
       <div
@@ -41,17 +41,21 @@ const DesktopView = ({ basket, setBasket }) => {
       >
         {basket.map((product, index) => (
           <div className="flex items-center">
-          {isDragging && <div className={`w-[1px] h-16  ${hoverIndex===index?"bg-slate-400":"bg-slate-200"}`}/>}
-          <SingleProduct
-            key={index}
-            index={index}
-            src={product.src}
-            name={product.name}
-            num={product.num}
-            moveItem={moveItem}
-            setIsDragging={setIsDragging}
-            setHoverIndex={setHoverIndex}
-          />
+            {isDragging && (
+              <div
+                className={`w-[1px] h-16  ${
+                  hoverIndex === index ? "bg-slate-400" : "bg-slate-200"
+                }`}
+              />
+            )}
+            <SingleProduct
+              key={index}
+              index={index}
+              item={{ src: product.src, name: product.name, num: product.num }}
+              moveItem={moveItem}
+              setIsDragging={setIsDragging}
+              setHoverIndex={setHoverIndex}
+            />
           </div>
         ))}
       </div>
