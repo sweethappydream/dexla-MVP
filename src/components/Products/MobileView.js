@@ -26,7 +26,7 @@ const DesktopView = ({ basket, setBasket }) => {
         return updatedPets;
       });
     },
-    [basket]
+    [basket, setBasket]
   );
 
   return (
@@ -47,9 +47,7 @@ const DesktopView = ({ basket, setBasket }) => {
             <SingleProduct
               key={index}
               index={index}
-              src={product.src}
-              name={product.name}
-              num={product.num}
+              item={{ src: product.src, name: product.name, num: product.num }}
               moveItem={moveItem}
               setIsDragging={setIsDragging}
               setHoverIndex={setHoverIndex}

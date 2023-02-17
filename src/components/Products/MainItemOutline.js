@@ -38,8 +38,10 @@ const MainItemOutline = ({
       if (dragIndex < hoverIndex && hoverActualY < hoverMiddleY) return;
       // if dragging up, continue only when hover is bigger than middle Y
       if (dragIndex > hoverIndex && hoverActualY > hoverMiddleY) return;
-
-      moveItem(dragIndex, hoverIndex);
+      if(dragIndex !== hoverIndex)
+        {
+          moveItem(dragIndex, hoverIndex);
+        }
       singleProduct.index = hoverIndex;
     },
   });

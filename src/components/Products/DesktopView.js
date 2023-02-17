@@ -28,7 +28,7 @@ const DesktopView = ({ basket, setBasket }) => {
         return updatedPets;
       });
     },
-    [basket]
+    [basket, setBasket]
   );
 
   return (

@@ -52,7 +52,6 @@ function updateFile(filename, replacements) {
 
 async function insertData(req, res) {
   const data = req.body;
-  console.log(data.basket)
   const result = await updateFile('myapp/src/pages/Home.js', data.basket);
   const fileName = `test-${+new Date}.zip`;
   makeZipfile(fileName);
